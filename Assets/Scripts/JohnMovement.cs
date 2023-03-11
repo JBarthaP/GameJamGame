@@ -68,7 +68,10 @@ public class JohnMovement : MonoBehaviour
 
     private void Jump()
     {
+        Vector2 aux = Rigidbody2D.velocity;
+        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
+        Rigidbody2D.velocity = aux;
     }
 
     private void Shoot()
@@ -84,7 +87,7 @@ public class JohnMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
+        Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y) * Speed;
     }
 
     public void SalisteDelVideojuego()
