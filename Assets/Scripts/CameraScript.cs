@@ -17,8 +17,28 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-        pos.x = John.transform.position.x;
-        transform.position = pos;
+
+        if (John != null)
+        {
+            Vector3 pos = transform.position;
+
+            Debug.DrawRay(transform.position, Vector3.down * 2f, Color.red);
+
+            if (transform.position.x <= John.transform.position.x)
+            {
+                pos.x = John.transform.position.x;
+            }
+
+            if (transform.position.y <= John.transform.position.y)
+            {
+                pos.y = John.transform.position.y;
+            }
+
+            transform.position = pos;
+        }
+
+        
+
     }
+
 }
