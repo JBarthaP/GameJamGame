@@ -24,15 +24,15 @@ public class CameraScript : MonoBehaviour
 
             Debug.DrawRay(transform.position, Vector3.down * 2f, Color.red);
 
-            if (transform.position.x <= John.transform.position.x)
-            {
+            //if (transform.position.x <= John.transform.position.x)
+            //{
                 pos.x = John.transform.position.x;
-            }
+            //}
 
-            if (transform.position.y <= John.transform.position.y)
-            {
+            //if (transform.position.y <= John.transform.position.y)
+            //{
                 pos.y = John.transform.position.y;
-            }
+            //}
 
             transform.position = pos;
         }

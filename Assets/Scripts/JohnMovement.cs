@@ -30,8 +30,9 @@ public class JohnMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Horizontal = Input.GetAxisRaw("Horizontal");
-
+        Debug.Log(Horizontal);
         Animator.SetBool("running", Horizontal != 0.0f);
 
         if (Horizontal < 0.0f)
