@@ -79,8 +79,14 @@ public class JohnMovement : MonoBehaviour
             Cooldown = Time.time;
         }
 
-        //Bufos
-        updateBuffs();
+        //Salir del juego
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+            //Bufos
+            updateBuffs();
 
         //Cambiar UI
         counterText.text = "Wrong Answers: " + Counter.ToString();
