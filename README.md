@@ -7,3 +7,6 @@ El peor alumno del juez decide que ese año no va a volver a suspender y pagar p
 ### Enlaces a los recursos
 
 - Assets para el personaje: https://didigameboy.itch.io/jambo-jungle-free-sprites-asset-pack
+- Sonidos: 
+  - https://freesound.org/people/AbdrTar/sounds/558121/
+  - https://freesound.org/people/Anthousai/sounds/406491/
