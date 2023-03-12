@@ -6,12 +6,18 @@ public class CameraScript : MonoBehaviour
 {
 
     public GameObject John;
+    public AudioClip intro;
+    public AudioClip LoopSong;
+
+    private AudioSource cameraAudio;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraAudio = GetComponent<AudioSource>();
+        cameraAudio.PlayOneShot(intro);
     }
 
     // Update is called once per frame
@@ -30,6 +36,11 @@ public class CameraScript : MonoBehaviour
             transform.position = pos;
         }
 
+        if (!cameraAudio.isPlaying)
+        {
+            cameraAudio.loop = true;
+            cameraAudio.PlayOneShot(LoopSong);
+        }
         
 
     }

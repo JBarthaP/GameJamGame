@@ -5177,6 +5177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   John: {fileID: 1152871339}
+  intro: {fileID: 8300000, guid: 0b8a276650d4da04f822470d555d2358, type: 3}
+  LoopSong: {fileID: 8300000, guid: 6b256a8eea2c687498a424c9d8f7a557, type: 3}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5191,7 +5193,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
