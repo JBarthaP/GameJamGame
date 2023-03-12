@@ -16,9 +16,9 @@ public class ApplyDebuff : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        JohnMovement john = collision.gameObject.GetComponent<JohnMovement>();
+        JohnMovement john = collision.GetComponent<JohnMovement>();
         if (john != null)
         {
             john.DebuffJohn();
