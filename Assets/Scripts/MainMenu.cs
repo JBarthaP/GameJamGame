@@ -15,4 +15,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Cerrar el juego");
         Application.Quit();
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
