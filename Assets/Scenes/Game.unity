@@ -5240,6 +5240,7 @@ MonoBehaviour:
   John: {fileID: 1152871339}
   intro: {fileID: 8300000, guid: 0b8a276650d4da04f822470d555d2358, type: 3}
   LoopSong: {fileID: 8300000, guid: 6b256a8eea2c687498a424c9d8f7a557, type: 3}
+  outroSong: {fileID: 8300000, guid: f1652182de25956418d27c553afef1d6, type: 3}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0

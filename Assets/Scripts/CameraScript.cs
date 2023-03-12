@@ -8,6 +8,7 @@ public class CameraScript : MonoBehaviour
     public GameObject John;
     public AudioClip intro;
     public AudioClip LoopSong;
+    public AudioClip outroSong;
 
     private AudioSource cameraAudio;
 
@@ -42,6 +43,17 @@ public class CameraScript : MonoBehaviour
             cameraAudio.PlayOneShot(LoopSong);
         }
         
+
+    }
+
+    public void endGameSound()
+    {
+        cameraAudio.loop = false;
+        while (cameraAudio.isPlaying)
+        {
+            cameraAudio.PlayOneShot(outroSong);
+        }
+
 
     }
 

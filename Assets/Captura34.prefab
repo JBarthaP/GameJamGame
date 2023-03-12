@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d347c980d5d008845b25bdb9ddc3cc2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debuffAudio: {fileID: 8300000, guid: 07b3b64616b982c43a57156d01d9af74, type: 3}
 --- !u!61 &-7083780870286008584
 BoxCollider2D:
   m_ObjectHideFlags: 0

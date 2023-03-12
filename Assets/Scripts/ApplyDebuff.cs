@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ApplyDebuff : MonoBehaviour
 {
+    public AudioClip debuffAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class ApplyDebuff : MonoBehaviour
         JohnMovement john = collision.GetComponent<JohnMovement>();
         if (john != null)
         {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(debuffAudio);
             john.DebuffJohn();
 
         }

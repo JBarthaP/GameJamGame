@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ApplyBuffScript : MonoBehaviour
 {
+
+    public AudioClip buffAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class ApplyBuffScript : MonoBehaviour
         JohnMovement john = collision.gameObject.GetComponent<JohnMovement>();
         if (john != null)
         {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(buffAudio);
             john.BuffJohn();
 
         }
