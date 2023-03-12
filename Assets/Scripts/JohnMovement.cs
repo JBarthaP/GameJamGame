@@ -18,6 +18,13 @@ public class JohnMovement : MonoBehaviour
     //Bala
     public GameObject BulletPrefab;
     private float Cooldown;
+
+    //Bufos
+    private float buf_time;
+    private float debuf_time;
+
+    private bool buffed = false;
+    private bool debuffed = false;
     
 
     // Start is called before the first frame update
@@ -32,7 +39,7 @@ public class JohnMovement : MonoBehaviour
     {
         
         Horizontal = Input.GetAxisRaw("Horizontal");
-        Debug.Log(Horizontal);
+
         Animator.SetBool("running", Horizontal != 0.0f);
 
         if (Horizontal < 0.0f)
@@ -65,6 +72,9 @@ public class JohnMovement : MonoBehaviour
             Shoot();
             Cooldown = Time.time;
         }
+
+        //Bufos
+        updateBuffs();
     }
 
     private void Jump()
@@ -83,6 +93,55 @@ public class JohnMovement : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + dir * 0.1f, Quaternion.identity);
         bullet.GetComponent<BulletScript>().setDirection(dir);
+    }
+
+    public void BuffJohn()
+    {
+        buf_time = 12;
+        buffed = true;
+        debuffed = false;
+
+        Speed = 1;
+        JumpForce = 230;
+
+    }
+
+    public void DebuffJohn()
+    {
+
+        debuf_time = 10;
+        debuffed = true;
+        buffed = false;
+
+        Speed = 0.85f;
+        JumpForce = 200;
+
+    }
+
+    private void updateBuffs()
+    {
+        if (buffed)
+        {
+            buf_time -= Time.deltaTime;
+            if (buf_time <= 0) 
+            {
+                buffed = false;
+
+                Speed = 1;
+                JumpForce = 190;
+            }
+        }
+        else if (debuffed)
+        {
+            debuf_time -= Time.deltaTime;
+            if(debuf_time <= 0)
+            {
+                debuffed = false;
+
+                Speed = 1;
+                JumpForce = 190;
+            }
+        }
     }
 
 
