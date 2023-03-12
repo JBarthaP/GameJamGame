@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5175200152914808696}
   - component: {fileID: 3181564254084720878}
   - component: {fileID: 5566942101545989511}
+  - component: {fileID: 8960101047520958516}
   m_Layer: 0
   m_Name: Captura3 (1)
   m_TagString: Untagged
@@ -133,3 +134,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 0.37}
   m_EdgeRadius: 0
+--- !u!114 &8960101047520958516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573627613060986867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3dcfde99a09c244b07f22a5d4d15fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

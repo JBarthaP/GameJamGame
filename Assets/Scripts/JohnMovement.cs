@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class JohnMovement : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class JohnMovement : MonoBehaviour
 
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
+    public int Counter = 0;
+
+    public TextMeshProUGUI counterText;
 
     private bool Grounded;
     private Animator Animator;
@@ -30,6 +35,7 @@ public class JohnMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        counterText.text = "Wrong Answers: " + Counter.ToString();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
     }
@@ -61,7 +67,7 @@ public class JohnMovement : MonoBehaviour
             Grounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && Grounded)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && Grounded)
         {
             Jump();
         }
@@ -75,6 +81,9 @@ public class JohnMovement : MonoBehaviour
 
         //Bufos
         updateBuffs();
+
+        //Cambiar UI
+        counterText.text = "Wrong Answers: " + Counter.ToString();
     }
 
     private void Jump()
@@ -142,6 +151,11 @@ public class JohnMovement : MonoBehaviour
                 JumpForce = 190;
             }
         }
+    }
+
+    public void updateCounter(int i)
+    {
+        Counter += i;
     }
 
 
