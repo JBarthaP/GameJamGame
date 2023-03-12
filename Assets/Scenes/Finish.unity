@@ -1055,7 +1055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -15}
+  m_AnchoredPosition: {x: 5, y: 4.8}
   m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101930715
@@ -1078,9 +1078,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Creadores\n\nPablo Gamo Gonz\xE1lez \nJos\xE9 Luis Bartha de las Pe\xF1as\nMario
-    Gonz\xE1lez de Santos\n\n\nAssets utilizados\nPersonaje(John): didigameboy\n\nEnlaces
-    a los recursos en nuestro GitHub"
+  m_text: "Creadores\nPablo Gamo Gonz\xE1lez \nJos\xE9 Luis Bartha de las Pe\xF1as\nMario
+    Gonz\xE1lez de Santos\n\nCompositor M\xFAsica\nMario Gonz\xE1lez de Santos\n\nAssets
+    utilizados\nPersonaje(John): didigameboy\n\nEnlaces a los recursos en nuestro
+    GitHub"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
